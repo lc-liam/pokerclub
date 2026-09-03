@@ -801,15 +801,17 @@ p {
 	gap: 1.25rem;
 }
 
-/* Each logo sits in its own white tile. The source logos have baked-in white
-   backgrounds and wildly different aspect ratios, so a uniform tile is the
-   only way to make them line up. */
+/* Each logo sits in its own white tile. The logos are the firms' official
+   assets — transparent PNGs (Jump is an SVG) in their dark-on-light variants,
+   with wildly different aspect ratios, so a uniform tile is the only way to
+   make them line up. Wide wordmarks like HRT and Susquehanna end up shorter
+   than the squarer marks; that is the aspect ratio, not a bug. */
 .logo-strip a {
 	display: grid;
 	place-items: center;
-	width: 170px;
+	width: 178px;
 	height: 92px;
-	padding: 0.9rem 1.1rem;
+	padding: 0.9rem 0.7rem;
 	background: var(--paper);
 	border: 1px solid var(--paper-line);
 	border-radius: 12px;
