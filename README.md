@@ -50,9 +50,20 @@ Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder
 
 The `.nojekyll` file is there to stop GitHub from running the files through Jekyll.
 
+## About the logo
+
+`assets/img/logo.svg` is the club's card-stack mark sitting on a white roundel.
+The plate is not decoration: the mark's card faces are transparent and its
+outlines are black, so on its own it disappears against the dark nav, hero and
+footer. If you ever get a reversed (white) version of the mark, it can go in
+directly and the roundel can come out.
+
 ## Still to do
 
-- [ ] Swap the placeholder mark in `assets/img/logo.svg` for the real club logo
-- [ ] Fill in the exec board with real names, roles, bios and headshots
-- [ ] Add a GTS logo to `assets/img/sponsors/`
-- [ ] Confirm the Tartan Connect, Discord, Instagram and email links are current
+- [ ] Full names for five execs — the cards currently read `Grubor`, `Guha`,
+      `Sam`, `Steve` and `Zane`, taken from the photo filenames
+- [ ] Roles and bios for everyone below Jeffery and Liam
+- [ ] Better-framed photos for the six execs whose headshots are wide shots
+- [ ] A stacked, dark-on-light HRT lockup and a compact Susquehanna mark — both
+      currently render short next to the squarer sponsor logos
+- [ ] Turn on GitHub Pages (Settings → Pages → `main` → `/ (root)`)
