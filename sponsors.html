@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sponsors · CMU Poker Club</title>
+		<meta
+			name="description"
+			content="The firms that support the CMU Poker Club — GTS, Jump Trading, Jane Street, Hudson River Trading and SIG."
+		/>
+		<link rel="icon" href="assets/img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/css/site.css" />
+	</head>
+	<body>
+		<header class="nav">
+			<div class="wrap nav__inner">
+				<a class="nav__brand" href="index.html">
+					<img src="assets/img/logo.svg" alt="" />
+					<span>CMU Poker Club</span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+					<span></span>
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul class="nav__links" id="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="execs.html">Exec Board</a></li>
+					<li><a href="sponsors.html" aria-current="page">Sponsors</a></li>
+					<li><a class="nav__cta" href="index.html#join">Join</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<main>
+			<section class="banner">
+				<div class="wrap">
+					<h1>Our sponsors</h1>
+					<p>
+						The club is supported by firms whose work runs on the same instincts poker rewards —
+						reading incomplete information and deciding under uncertainty.
+					</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="wrap">
+					<!-- ==================================================
+					     ADDING A SPONSOR
+					     Copy one <article class="sponsor"> block into the tier
+					     you want, drop a logo into assets/img/sponsors/, and
+					     point the <img src> at it. If you don't have a logo,
+					     use the <span class="sponsor__wordmark"> form instead.
+					     ================================================== -->
+
+					<!-- ------------------------------------- PLATINUM -->
+					<div class="tier tier--platinum">
+						<div class="tier__head">
+							<h2>Platinum</h2>
+							<span class="tier__badge">Platinum tier</span>
+						</div>
+						<div class="grid grid--three-up">
+							<article class="sponsor">
+								<!-- No logo file yet — swap this span for an <img> once we have one,
+								     and drop the sr-only class off the heading below. -->
+								<div class="sponsor__logo"><span class="sponsor__wordmark">GTS</span></div>
+								<h3 class="sr-only">GTS</h3>
+								<p>
+									GTS is a technology-driven electronic market maker, providing liquidity across
+									equities, ETFs, currencies, commodities and fixed income. The firm builds its own
+									quantitative models and trading infrastructure to price thousands of instruments
+									worldwide.
+								</p>
+								<a class="sponsor__link" href="https://www.gtsx.com/" target="_blank" rel="noreferrer"
+									>Visit GTS</a
+								>
+							</article>
+
+							<article class="sponsor">
+								<div class="sponsor__logo">
+									<img src="assets/img/sponsors/jump.png" alt="Jump Trading logo" />
+								</div>
+								<h3>Jump Trading</h3>
+								<p>
+									Jump Trading is a global algorithmic trading firm combining quantitative research,
+									cutting-edge technology and an entrepreneurial culture. Founded in 1999, Jump has
+									offices across the Americas, Europe and Asia, and has built one of the largest
+									private supercomputers in the world to test its ideas.
+								</p>
+								<a
+									class="sponsor__link"
+									href="https://www.jumptrading.com/"
+									target="_blank"
+									rel="noreferrer"
+									>Visit Jump Trading</a
+								>
+							</article>
+
+							<article class="sponsor">
+								<div class="sponsor__logo">
+									<img src="assets/img/sponsors/janestreet.png" alt="Jane Street logo" />
+								</div>
+								<h3>Jane Street</h3>
+								<p>
+									Jane Street is a quantitative trading firm with offices worldwide. They hire smart,
+									humble people who like to solve problems, build systems and test theories — and
+									they're known for teaching new hires to think about markets through games and
+									probability puzzles.
+								</p>
+								<a
+									class="sponsor__link"
+									href="https://www.janestreet.com/"
+									target="_blank"
+									rel="noreferrer"
+									>Visit Jane Street</a
+								>
+							</article>
+						</div>
+					</div>
+
+					<!-- ----------------------------------------- GOLD -->
+					<div class="tier tier--gold">
+						<div class="tier__head">
+							<h2>Gold</h2>
+							<span class="tier__badge">Gold tier</span>
+						</div>
+						<div class="grid grid--three-up">
+							<article class="sponsor">
+								<div class="sponsor__logo">
+									<img src="assets/img/sponsors/hrt.png" alt="Hudson River Trading logo" />
+								</div>
+								<h3>Hudson River Trading</h3>
+								<p>
+									Hudson River Trading is a multi-asset class quantitative trading firm that provides
+									liquidity on global markets and directly to clients. HRT has built one of the
+									world's most advanced computing environments for research, modeling and risk
+									management.
+								</p>
+								<a
+									class="sponsor__link"
+									href="https://www.hudsonrivertrading.com/"
+									target="_blank"
+									rel="noreferrer"
+									>Visit Hudson River Trading</a
+								>
+							</article>
+						</div>
+					</div>
+
+					<!-- --------------------------------------- SILVER -->
+					<div class="tier tier--silver">
+						<div class="tier__head">
+							<h2>Silver</h2>
+							<span class="tier__badge">Silver tier</span>
+						</div>
+						<div class="grid grid--three-up">
+							<article class="sponsor">
+								<div class="sponsor__logo">
+									<img src="assets/img/sponsors/sig.png" alt="SIG logo" />
+								</div>
+								<h3>SIG</h3>
+								<p>
+									Susquehanna International Group is a global quantitative trading firm built around
+									decision-making under uncertainty. Poker is part of how SIG trains its traders —
+									the firm uses the game to teach probabilistic thinking and disciplined risk-taking.
+								</p>
+								<a class="sponsor__link" href="https://sig.com/" target="_blank" rel="noreferrer"
+									>Visit SIG</a
+								>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--warm">
+				<div class="wrap">
+					<div class="callout">
+						<h2>Interested in sponsoring us?</h2>
+						<p>
+							We work with firms that want to reach students who think analytically and enjoy games
+							of incomplete information. Get in touch and we'll send over what a partnership looks
+							like.
+						</p>
+						<div class="btn-row">
+							<a class="btn btn--primary" href="mailto:pokerclub@andrew.cmu.edu">Email the club</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrap">
+				<div class="footer__grid">
+					<div>
+						<div class="footer__brand">
+							<img src="assets/img/logo.svg" alt="" />
+							<strong>CMU Poker Club</strong>
+						</div>
+						<p>
+							The poker club at Carnegie Mellon University. We're here to play, to learn, and to have
+							fun — whatever your experience with the game.
+						</p>
+					</div>
+					<div>
+						<h4>Pages</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About the club</a></li>
+							<li><a href="execs.html">Exec board</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Stay connected</h4>
+						<ul>
+							<li><a href="mailto:pokerclub@andrew.cmu.edu">pokerclub@andrew.cmu.edu</a></li>
+							<li><a href="https://discord.gg/TVc2rXRfGY">Discord</a></li>
+							<li><a href="https://www.instagram.com/cmupokerclub/">Instagram</a></li>
+							<li>
+								<a href="https://tartanconnect.cmu.edu/feeds?type=club&type_id=68212&tab=home"
+									>Tartan Connect</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bar">
+				<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; width: min(100% - 2.5rem, var(--wrap))">
+					<p>© 2026 CMU Poker Club</p>
+					<p>Carnegie Mellon University</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/nav.js"></script>
+	</body>
+</html>

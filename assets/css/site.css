@@ -1,0 +1,1006 @@
+/* ==========================================================================
+   CMU Poker Club — site styles
+   One stylesheet for the whole site. Colors live in :root, so re-theming the
+   site is a matter of changing the values below and nothing else.
+   ========================================================================== */
+
+:root {
+	/* Brand */
+	--crimson: #bc0001;
+	--crimson-bright: #e02a2b;
+	--crimson-deep: #2b0303;
+
+	/* Neutrals */
+	--ink: #0a0707;
+	--ink-soft: #171313;
+	--ink-line: #2a2323;
+	--paper: #ffffff;
+	--paper-warm: #faf7f6;
+	--paper-line: #e7e0de;
+
+	--text: #171313;
+	--text-muted: #6b615f;
+	--text-on-dark: #ffffff;
+	--text-on-dark-muted: rgba(255, 255, 255, 0.68);
+
+	/* Tiers */
+	--tier-platinum: #9fb6cd;
+	--tier-gold: #c9a227;
+	--tier-silver: #9aa3a8;
+
+	/* Type */
+	--font-display: 'Outfit', 'Trebuchet MS', system-ui, sans-serif;
+	--font-body: 'M PLUS Rounded 1c', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	/* Layout */
+	--nav-h: 68px;
+	--wrap: 1120px;
+	--radius: 14px;
+	--shadow: 0 1px 2px rgba(23, 19, 19, 0.06), 0 8px 28px rgba(23, 19, 19, 0.08);
+	--shadow-lift: 0 2px 4px rgba(23, 19, 19, 0.08), 0 18px 44px rgba(23, 19, 19, 0.14);
+}
+
+/* --------------------------------------------------------------- reset */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--text);
+	font-family: var(--font-body);
+	font-size: 17px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: var(--crimson);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-display);
+	line-height: 1.12;
+	margin: 0 0 0.5em;
+	letter-spacing: -0.015em;
+}
+
+h1 {
+	font-size: clamp(2.6rem, 7vw, 5rem);
+	font-weight: 700;
+}
+h2 {
+	font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+::selection {
+	background: #f7c1c1;
+	color: #000;
+}
+
+:focus-visible {
+	outline: 3px solid var(--crimson-bright);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ------------------------------------------------------------- helpers */
+
+.wrap {
+	width: min(100% - 2.5rem, var(--wrap));
+	margin-inline: auto;
+}
+
+.section {
+	padding: clamp(3.5rem, 8vw, 6rem) 0;
+}
+
+.section--tight {
+	padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+}
+
+.section--warm {
+	background: var(--paper-warm);
+	border-block: 1px solid var(--paper-line);
+}
+
+.section-head {
+	max-width: 46rem;
+	margin-bottom: 2.5rem;
+}
+
+.section-head--center {
+	margin-inline: auto;
+	text-align: center;
+}
+
+.eyebrow {
+	font-family: var(--font-display);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	margin: 0 0 0.75rem;
+}
+
+.lede {
+	font-size: 1.15rem;
+	color: var(--text-muted);
+	margin: 0;
+}
+
+.rule {
+	width: 64px;
+	height: 3px;
+	background: var(--crimson);
+	border: 0;
+	border-radius: 2px;
+	margin: 0 0 1.5rem;
+}
+
+.section-head--center .rule {
+	margin-inline: auto;
+}
+
+/* ------------------------------------------------------------- buttons */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--font-display);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	padding: 0.85rem 1.6rem;
+	border-radius: 999px;
+	border: 2px solid transparent;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease,
+		border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+.btn:active {
+	transform: translateY(0);
+}
+
+.btn--primary {
+	background: var(--crimson);
+	color: #fff;
+	box-shadow: 0 6px 20px rgba(188, 0, 1, 0.28);
+}
+
+.btn--primary:hover {
+	background: var(--crimson-bright);
+	box-shadow: 0 10px 26px rgba(188, 0, 1, 0.34);
+}
+
+.btn--ghost {
+	border-color: currentColor;
+	color: var(--crimson);
+	background: transparent;
+}
+
+.btn--ghost:hover {
+	background: var(--crimson);
+	border-color: var(--crimson);
+	color: #fff;
+}
+
+.btn--on-dark {
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+}
+
+.btn--on-dark:hover {
+	background: #fff;
+	border-color: #fff;
+	color: var(--crimson-deep);
+}
+
+.btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.85rem;
+	margin-top: 1.75rem;
+}
+
+/* ----------------------------------------------------------------- nav */
+
+.nav {
+	position: fixed;
+	inset: 0 0 auto;
+	height: var(--nav-h);
+	z-index: 100;
+	background: rgba(10, 7, 7, 0.92);
+	backdrop-filter: saturate(160%) blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav__inner {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.nav__brand {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	text-decoration: none;
+	color: var(--text-on-dark);
+	min-width: 0;
+}
+
+.nav__brand img {
+	height: 40px;
+	width: auto;
+	flex: none;
+}
+
+.nav__brand span {
+	font-family: var(--font-display);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__links a {
+	display: block;
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	font-family: var(--font-display);
+	font-size: 0.9rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text-on-dark-muted);
+	text-decoration: none;
+	transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav__links a:hover {
+	color: #fff;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.nav__links a[aria-current='page'] {
+	color: #fff;
+	background: var(--crimson);
+}
+
+.nav__cta {
+	margin-left: 0.5rem;
+	padding: 0.55rem 1.15rem !important;
+	background: var(--crimson);
+	color: #fff !important;
+}
+
+.nav__cta:hover {
+	background: var(--crimson-bright) !important;
+}
+
+.nav__toggle {
+	display: none;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	color: #fff;
+}
+
+.nav__toggle span,
+.nav__toggle span::before,
+.nav__toggle span::after {
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: currentColor;
+	border-radius: 2px;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav__toggle span {
+	margin-inline: auto;
+	position: relative;
+}
+
+.nav__toggle span::before,
+.nav__toggle span::after {
+	content: '';
+	position: absolute;
+}
+
+.nav__toggle span::before {
+	top: -7px;
+}
+.nav__toggle span::after {
+	top: 7px;
+}
+
+.nav[data-open='true'] .nav__toggle span {
+	background: transparent;
+}
+.nav[data-open='true'] .nav__toggle span::before {
+	transform: translateY(7px) rotate(45deg);
+}
+.nav[data-open='true'] .nav__toggle span::after {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 860px) {
+	.nav__toggle {
+		display: block;
+	}
+
+	.nav__links {
+		position: fixed;
+		top: var(--nav-h);
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		background: rgba(10, 7, 7, 0.98);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		padding: 0.5rem 1.25rem 1.25rem;
+		transform: translateY(-12px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+
+	.nav[data-open='true'] .nav__links {
+		opacity: 1;
+		transform: none;
+		pointer-events: auto;
+	}
+
+	.nav__links a {
+		padding: 0.9rem 0.75rem;
+		border-radius: 10px;
+		font-size: 1rem;
+	}
+
+	.nav__cta {
+		margin: 0.5rem 0 0;
+		text-align: center;
+	}
+}
+
+/* ---------------------------------------------------------------- hero */
+
+.hero {
+	position: relative;
+	margin-top: var(--nav-h);
+	min-height: min(78vh, 640px);
+	display: grid;
+	place-items: center;
+	text-align: center;
+	padding: clamp(3rem, 9vw, 6rem) 0;
+	color: var(--text-on-dark);
+	background: radial-gradient(ellipse at 50% 40%, #3a0505 0%, var(--crimson-deep) 45%, var(--ink) 100%);
+	overflow: hidden;
+}
+
+/* Faint suit motifs behind the hero copy. Decorative only. */
+.hero::before,
+.hero::after {
+	content: '';
+	position: absolute;
+	width: 42vmax;
+	height: 42vmax;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(188, 0, 1, 0.35), transparent 62%);
+	pointer-events: none;
+}
+
+.hero::before {
+	top: -16vmax;
+	left: -12vmax;
+}
+.hero::after {
+	bottom: -20vmax;
+	right: -14vmax;
+}
+
+.hero__inner {
+	position: relative;
+	z-index: 1;
+	max-width: 52rem;
+}
+
+.hero__mark {
+	width: clamp(84px, 13vw, 132px);
+	height: auto;
+	margin: 0 auto 1.5rem;
+	filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+}
+
+.hero h1 {
+	margin: 0 0 0.6rem;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+}
+
+.hero__tag {
+	font-family: var(--font-display);
+	font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+	font-weight: 300;
+	color: var(--text-on-dark-muted);
+	margin: 0;
+}
+
+.hero .btn-row {
+	justify-content: center;
+	margin-top: 2.25rem;
+}
+
+/* Small page banner for interior pages */
+.banner {
+	margin-top: var(--nav-h);
+	padding: clamp(3rem, 7vw, 4.5rem) 0;
+	color: var(--text-on-dark);
+	background: radial-gradient(ellipse at 30% 0%, #3a0505 0%, var(--crimson-deep) 55%, var(--ink) 100%);
+}
+
+.banner h1 {
+	font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+	margin: 0 0 0.4rem;
+	text-transform: uppercase;
+}
+
+.banner p {
+	margin: 0;
+	max-width: 42rem;
+	color: var(--text-on-dark-muted);
+	font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------- cards */
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.grid--2 {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.grid--3 {
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.grid--4 {
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+/* Fixed three-up. Unlike auto-fit, a lone card keeps its width instead of
+   stretching across the whole row — which matters for the one-sponsor tiers. */
+.grid--three-up {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 940px) {
+	.grid--three-up {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 620px) {
+	.grid--three-up {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+/* Text + sidebar split used on the About page */
+.split {
+	display: grid;
+	gap: clamp(2rem, 5vw, 3.5rem);
+	grid-template-columns: 1.45fr 1fr;
+	align-items: start;
+}
+
+@media (max-width: 900px) {
+	.split {
+		grid-template-columns: 1fr;
+	}
+}
+
+.split aside {
+	position: sticky;
+	top: calc(var(--nav-h) + 2rem);
+}
+
+@media (max-width: 900px) {
+	.split aside {
+		position: static;
+	}
+}
+
+.card {
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-radius: var(--radius);
+	padding: 1.75rem;
+	box-shadow: var(--shadow);
+}
+
+.card h3 {
+	margin-bottom: 0.5rem;
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
+
+.card__icon {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 1rem;
+	color: var(--crimson);
+}
+
+/* ---------------------------------------------------------- exec cards */
+
+.exec-grid {
+	display: grid;
+	gap: 1.75rem;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.exec {
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exec:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--shadow-lift);
+}
+
+.exec__photo {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	object-fit: cover;
+	background: linear-gradient(150deg, #2b0303, #0a0707);
+}
+
+.exec__body {
+	padding: 1.25rem 1.35rem 1.5rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.exec__name {
+	font-family: var(--font-display);
+	font-size: 1.15rem;
+	font-weight: 600;
+	margin: 0 0 0.15rem;
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	flex-wrap: wrap;
+}
+
+.exec__role {
+	font-family: var(--font-display);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	margin: 0 0 0.75rem;
+}
+
+.exec__bio {
+	font-size: 0.95rem;
+	color: var(--text-muted);
+	margin: 0;
+}
+
+.exec__link {
+	color: var(--text-muted);
+	display: inline-flex;
+	transition: color 0.15s ease;
+}
+
+.exec__link:hover {
+	color: #0a66c2;
+}
+
+.exec__link svg {
+	width: 17px;
+	height: 17px;
+}
+
+/* -------------------------------------------------------- sponsor tiers */
+
+.tier + .tier {
+	margin-top: 3.5rem;
+}
+
+.tier__head {
+	display: flex;
+	align-items: baseline;
+	gap: 0.9rem;
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 2px solid var(--tier-color, var(--paper-line));
+}
+
+.tier__head h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.tier__badge {
+	font-family: var(--font-display);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: #fff;
+	background: var(--tier-color, var(--text-muted));
+	padding: 0.25rem 0.7rem;
+	border-radius: 999px;
+}
+
+.tier--platinum {
+	--tier-color: var(--tier-platinum);
+}
+.tier--gold {
+	--tier-color: var(--tier-gold);
+}
+.tier--silver {
+	--tier-color: var(--tier-silver);
+}
+
+.sponsor {
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-top: 3px solid var(--tier-color, var(--paper-line));
+	border-radius: var(--radius);
+	padding: 1.75rem;
+	box-shadow: var(--shadow);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sponsor:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--shadow-lift);
+}
+
+.sponsor__logo {
+	height: 68px;
+	display: flex;
+	align-items: center;
+}
+
+.sponsor__logo img {
+	max-height: 100%;
+	width: auto;
+	object-fit: contain;
+}
+
+/* Fallback wordmark for sponsors whose logo file we don't have. */
+.sponsor__wordmark {
+	font-family: var(--font-display);
+	font-size: 1.9rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	color: var(--text);
+}
+
+.sponsor h3 {
+	margin: 0;
+}
+
+.sponsor p {
+	color: var(--text-muted);
+	font-size: 0.95rem;
+	margin: 0;
+	flex: 1;
+}
+
+.sponsor__link {
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.sponsor__link::after {
+	content: '→';
+	transition: transform 0.2s ease;
+}
+
+.sponsor:hover .sponsor__link::after {
+	transform: translateX(4px);
+}
+
+/* Compact logo strip used on the home page */
+.logo-strip {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1.25rem;
+}
+
+/* Each logo sits in its own white tile. The source logos have baked-in white
+   backgrounds and wildly different aspect ratios, so a uniform tile is the
+   only way to make them line up. */
+.logo-strip a {
+	display: grid;
+	place-items: center;
+	width: 170px;
+	height: 92px;
+	padding: 0.9rem 1.1rem;
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-radius: 12px;
+	box-shadow: 0 1px 2px rgba(23, 19, 19, 0.05);
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.logo-strip a:hover {
+	transform: translateY(-3px);
+	border-color: rgba(188, 0, 1, 0.35);
+	box-shadow: var(--shadow);
+}
+
+.logo-strip img {
+	max-height: 46px;
+	width: auto;
+	object-fit: contain;
+}
+
+.logo-strip .sponsor__wordmark {
+	font-size: 1.7rem;
+	color: var(--text);
+}
+
+/* ----------------------------------------------------------- call-outs */
+
+.callout {
+	background: linear-gradient(140deg, var(--crimson-deep), var(--ink));
+	color: var(--text-on-dark);
+	border-radius: 20px;
+	padding: clamp(2.25rem, 5vw, 3.5rem);
+	text-align: center;
+}
+
+.callout h2 {
+	margin-bottom: 0.5rem;
+}
+
+.callout p {
+	color: var(--text-on-dark-muted);
+	max-width: 38rem;
+	margin-inline: auto;
+	font-size: 1.1rem;
+}
+
+.callout .btn-row {
+	justify-content: center;
+}
+
+/* Fact list used on the About page */
+.facts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 1rem;
+}
+
+.facts li {
+	display: flex;
+	gap: 0.85rem;
+	align-items: flex-start;
+}
+
+.facts svg {
+	flex: none;
+	width: 22px;
+	height: 22px;
+	margin-top: 0.28rem;
+	color: var(--crimson);
+}
+
+.facts strong {
+	font-family: var(--font-display);
+	display: block;
+}
+
+.facts span {
+	color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------- footer */
+
+.footer {
+	background: var(--ink-soft);
+	color: var(--text-on-dark);
+	padding: 3.5rem 0 0;
+}
+
+.footer__grid {
+	display: grid;
+	gap: 2.25rem;
+	grid-template-columns: 1.6fr 1fr 1fr;
+	padding-bottom: 2.5rem;
+}
+
+@media (max-width: 760px) {
+	.footer__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.footer h4 {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.55);
+	margin: 0 0 1rem;
+}
+
+.footer p {
+	color: var(--text-on-dark-muted);
+	font-size: 0.95rem;
+}
+
+.footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.55rem;
+}
+
+.footer a {
+	color: rgba(255, 255, 255, 0.82);
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.footer__brand {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	margin-bottom: 1rem;
+}
+
+.footer__brand img {
+	height: 42px;
+	width: auto;
+}
+
+.footer__brand strong {
+	font-family: var(--font-display);
+	font-size: 1.05rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.footer__bar {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 1.25rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__bar p {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+/* ------------------------------------------------------------ prose */
+
+.prose {
+	max-width: 44rem;
+}
+
+.prose h2 {
+	margin-top: 2.5rem;
+}
+
+.prose h2:first-child {
+	margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

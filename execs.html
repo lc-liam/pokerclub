@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Exec Board · CMU Poker Club</title>
+		<meta name="description" content="The people running the CMU Poker Club." />
+		<link rel="icon" href="assets/img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/css/site.css" />
+	</head>
+	<body>
+		<header class="nav">
+			<div class="wrap nav__inner">
+				<a class="nav__brand" href="index.html">
+					<img src="assets/img/logo.svg" alt="" />
+					<span>CMU Poker Club</span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+					<span></span>
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul class="nav__links" id="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="execs.html" aria-current="page">Exec Board</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a class="nav__cta" href="index.html#join">Join</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<main>
+			<section class="banner">
+				<div class="wrap">
+					<h1>Exec board</h1>
+					<p>The people who run the games, book the rooms, and order the pizza.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="wrap">
+					<!-- ==================================================
+					     ADDING AN EXEC
+					     1. Put a square headshot in assets/img/execs/
+					        (name it firstname.jpg — 600×600 or larger is plenty)
+					     2. Copy one <article class="exec"> block below
+					     3. Update the src, name, role and bio
+					     Drop the <a class="exec__link"> if there's no LinkedIn.
+					     ================================================== -->
+					<div class="exec-grid">
+						<article class="exec">
+							<img class="exec__photo" src="assets/img/execs/placeholder.svg" alt="" />
+							<div class="exec__body">
+								<p class="exec__name">
+									Name
+									<a
+										class="exec__link"
+										href="#"
+										target="_blank"
+										rel="noreferrer"
+										aria-label="LinkedIn"
+									>
+										<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+											<path
+												d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-4z"
+											/>
+										</svg>
+									</a>
+								</p>
+								<p class="exec__role">Role</p>
+								<p class="exec__bio">
+									A sentence or two about them — what they do in the club, what they like about
+									poker, anything else worth knowing.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrap">
+				<div class="footer__grid">
+					<div>
+						<div class="footer__brand">
+							<img src="assets/img/logo.svg" alt="" />
+							<strong>CMU Poker Club</strong>
+						</div>
+						<p>
+							The poker club at Carnegie Mellon University. We're here to play, to learn, and to have
+							fun — whatever your experience with the game.
+						</p>
+					</div>
+					<div>
+						<h4>Pages</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About the club</a></li>
+							<li><a href="execs.html">Exec board</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Stay connected</h4>
+						<ul>
+							<li><a href="mailto:pokerclub@andrew.cmu.edu">pokerclub@andrew.cmu.edu</a></li>
+							<li><a href="https://discord.gg/TVc2rXRfGY">Discord</a></li>
+							<li><a href="https://www.instagram.com/cmupokerclub/">Instagram</a></li>
+							<li>
+								<a href="https://tartanconnect.cmu.edu/feeds?type=club&type_id=68212&tab=home"
+									>Tartan Connect</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bar">
+				<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; width: min(100% - 2.5rem, var(--wrap))">
+					<p>© 2026 CMU Poker Club</p>
+					<p>Carnegie Mellon University</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/nav.js"></script>
+	</body>
+</html>

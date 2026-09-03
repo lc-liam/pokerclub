@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>CMU Poker Club</title>
+		<meta
+			name="description"
+			content="The poker club at Carnegie Mellon University. Open to every skill level, low commitment, and always welcoming new players."
+		/>
+		<link rel="icon" href="assets/img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/css/site.css" />
+	</head>
+	<body>
+		<!-- ============================================================
+		     NAV — this block is repeated on every page. If you change it
+		     here, change it in about.html, execs.html and sponsors.html too.
+		     ============================================================ -->
+		<header class="nav">
+			<div class="wrap nav__inner">
+				<a class="nav__brand" href="index.html">
+					<img src="assets/img/logo.svg" alt="" />
+					<span>CMU Poker Club</span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+					<span></span>
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul class="nav__links" id="nav-links">
+					<li><a href="index.html" aria-current="page">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="execs.html">Exec Board</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a class="nav__cta" href="#join">Join</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<main>
+			<!-- ================================================== HERO -->
+			<section class="hero">
+				<div class="wrap hero__inner">
+					<img class="hero__mark" src="assets/img/logo.svg" alt="CMU Poker Club logo" />
+					<h1>CMU Poker Club</h1>
+					<p class="hero__tag">Play. Learn. Have fun. No experience required.</p>
+					<div class="btn-row">
+						<a class="btn btn--primary" href="#join">Join the club</a>
+						<a class="btn btn--on-dark" href="about.html">What we do</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ================================================= PITCH -->
+			<section class="section">
+				<div class="wrap">
+					<div class="section-head section-head--center">
+						<p class="eyebrow">About us</p>
+						<h2>A place to play poker and figure it out as you go</h2>
+						<hr class="rule" />
+						<p class="lede">
+							We run a home for the poker community at Carnegie Mellon — a place to sit down at a
+							table, pick up the game, and have a good time doing it. Every skill level is welcome,
+							from people who have never been dealt a hand to people who have played seriously for
+							years.
+						</p>
+					</div>
+
+					<div class="grid grid--3">
+						<article class="card">
+							<svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+								<circle cx="9" cy="7" r="4" />
+								<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+							</svg>
+							<h3>Any skill level</h3>
+							<p>
+								Never played before? Good — plenty of our members hadn't either. Show up, and someone
+								will walk you through the rules at the table.
+							</p>
+						</article>
+
+						<article class="card">
+							<svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<circle cx="12" cy="12" r="9" />
+								<path d="M12 7v5l3 2" />
+							</svg>
+							<h3>Low commitment</h3>
+							<p>
+								No attendance requirements, no dues to keep up with, no obligations. Come to the
+								meetings you want to come to and skip the ones you don't.
+							</p>
+						</article>
+
+						<article class="card">
+							<svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<rect x="3" y="5" width="18" height="16" rx="2" />
+								<path d="M3 10h18M8 3v4M16 3v4" />
+								<path d="m9.5 15.5 1.7 1.7 3.3-3.4" />
+							</svg>
+							<h3>Optional GBMs</h3>
+							<p>
+								General body meetings are where we play, eat, and sometimes run a strategy session.
+								They're completely optional — turn up when it suits you.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- =============================================== SPONSORS -->
+			<section class="section section--warm">
+				<div class="wrap">
+					<div class="section-head section-head--center">
+						<p class="eyebrow">Our supporters</p>
+						<h2>Backed by firms that think in probabilities</h2>
+						<hr class="rule" />
+					</div>
+
+					<!-- Logos live in assets/img/sponsors/. A sponsor without a logo
+					     file falls back to a plain wordmark — see GTS below. -->
+					<div class="logo-strip">
+						<a href="sponsors.html" aria-label="GTS"><span class="sponsor__wordmark">GTS</span></a>
+						<a href="sponsors.html"><img src="assets/img/sponsors/jump.png" alt="Jump Trading" /></a>
+						<a href="sponsors.html"><img src="assets/img/sponsors/janestreet.png" alt="Jane Street" /></a>
+						<a href="sponsors.html"><img src="assets/img/sponsors/hrt.png" alt="Hudson River Trading" /></a>
+						<a href="sponsors.html"><img src="assets/img/sponsors/sig.png" alt="SIG" /></a>
+					</div>
+
+					<div class="btn-row" style="justify-content: center">
+						<a class="btn btn--ghost" href="sponsors.html">Meet our sponsors</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================== JOIN -->
+			<section class="section" id="join">
+				<div class="wrap">
+					<div class="callout">
+						<h2>Come play with us</h2>
+						<p>
+							Join on Tartan Connect to get on the mailing list, or hop into the Discord to hear
+							about the next game. Both take about thirty seconds.
+						</p>
+						<div class="btn-row">
+							<!-- TODO: confirm this is still the right Tartan Connect link -->
+							<a
+								class="btn btn--primary"
+								href="https://tartanconnect.cmu.edu/feeds?type=club&type_id=68212&tab=home"
+								>Join on Tartan Connect</a
+							>
+							<a class="btn btn--on-dark" href="https://discord.gg/TVc2rXRfGY">Join the Discord</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ============================================================
+		     FOOTER — repeated on every page. Keep the four copies in sync.
+		     ============================================================ -->
+		<footer class="footer">
+			<div class="wrap">
+				<div class="footer__grid">
+					<div>
+						<div class="footer__brand">
+							<img src="assets/img/logo.svg" alt="" />
+							<strong>CMU Poker Club</strong>
+						</div>
+						<p>
+							The poker club at Carnegie Mellon University. We're here to play, to learn, and to have
+							fun — whatever your experience with the game.
+						</p>
+					</div>
+					<div>
+						<h4>Pages</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About the club</a></li>
+							<li><a href="execs.html">Exec board</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Stay connected</h4>
+						<ul>
+							<!-- TODO: confirm these are current -->
+							<li><a href="mailto:pokerclub@andrew.cmu.edu">pokerclub@andrew.cmu.edu</a></li>
+							<li><a href="https://discord.gg/TVc2rXRfGY">Discord</a></li>
+							<li><a href="https://www.instagram.com/cmupokerclub/">Instagram</a></li>
+							<li>
+								<a href="https://tartanconnect.cmu.edu/feeds?type=club&type_id=68212&tab=home"
+									>Tartan Connect</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bar">
+				<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; width: min(100% - 2.5rem, var(--wrap))">
+					<p>© 2026 CMU Poker Club</p>
+					<p>Carnegie Mellon University</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/nav.js"></script>
+	</body>
+</html>
