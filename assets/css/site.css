@@ -997,6 +997,294 @@ p {
 	margin-top: 0;
 }
 
+/* ------------------------------------------------------- event schedule */
+
+/* A horizontal scroller rather than a grid: the schedule runs to a whole
+   semester, and a wrapping grid would push everything else off the page. */
+.events {
+	display: flex;
+	gap: 1.15rem;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x proximity;
+	padding: 0.35rem 0.25rem 1.35rem;
+	margin-inline: -0.25rem;
+	scrollbar-width: thin;
+	scrollbar-color: #cbbfbc transparent;
+}
+
+.events::-webkit-scrollbar {
+	height: 8px;
+}
+
+.events::-webkit-scrollbar-track {
+	background: var(--paper-line);
+	border-radius: 999px;
+}
+
+.events::-webkit-scrollbar-thumb {
+	background: #cbbfbc;
+	border-radius: 999px;
+}
+
+.events::-webkit-scrollbar-thumb:hover {
+	background: var(--crimson);
+}
+
+.events:focus-visible {
+	outline: 3px solid var(--crimson-bright);
+	outline-offset: 4px;
+	border-radius: 4px;
+}
+
+.event {
+	flex: 0 0 14.5rem;
+	scroll-snap-align: start;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	padding: 1.3rem 1.35rem 1.4rem;
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-top: 3px solid var(--crimson);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--shadow-lift);
+}
+
+.event__date {
+	font-family: var(--font-display);
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.event__date span {
+	display: block;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	margin-bottom: 0.15rem;
+}
+
+.event__time {
+	margin: 0;
+	font-size: 1rem;
+	color: var(--text);
+}
+
+.event__place {
+	margin: 0;
+	font-size: 0.92rem;
+	color: var(--text-muted);
+}
+
+.event__tag {
+	align-self: flex-start;
+	margin-top: 0.55rem;
+	padding: 0.3rem 0.7rem;
+	border-radius: 999px;
+	background: var(--crimson);
+	color: #fff;
+	font-family: var(--font-display);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.event__note {
+	margin: 0.5rem 0 0;
+	font-size: 0.85rem;
+	line-height: 1.45;
+	color: var(--text-muted);
+}
+
+/* Weekends with no game. Kept in the row on purpose — a gap in the dates
+   reads as an oversight, whereas this tells people not to turn up. */
+.event--off {
+	background: transparent;
+	border: 1px dashed var(--paper-line);
+	box-shadow: none;
+}
+
+.event--off:hover {
+	transform: none;
+	box-shadow: none;
+}
+
+.event--off .event__date,
+.event--off .event__time {
+	color: var(--text-muted);
+}
+
+.event--off .event__date span {
+	color: var(--text-muted);
+}
+
+.events__hint {
+	margin: 0;
+	text-align: center;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+@media (max-width: 32rem) {
+	.event {
+		flex-basis: 13rem;
+	}
+}
+
+/* ------------------------------------------------------ contact dialog */
+
+.contact {
+	width: min(100% - 2rem, 38rem);
+	max-height: min(90vh, 46rem);
+	padding: 0;
+	border: 1px solid var(--paper-line);
+	border-radius: 18px;
+	background: var(--paper);
+	color: var(--text);
+	box-shadow: var(--shadow-lift);
+}
+
+.contact::backdrop {
+	background: rgba(10, 7, 7, 0.65);
+}
+
+.contact__form {
+	display: grid;
+	gap: 1.15rem;
+	padding: 2rem 2.15rem 2.15rem;
+}
+
+.contact__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.contact__head h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+.contact__close {
+	background: none;
+	border: 0;
+	padding: 0 0.25rem;
+	margin: -0.25rem -0.4rem 0 0;
+	font-size: 1.9rem;
+	line-height: 1;
+	color: var(--text-muted);
+	cursor: pointer;
+	border-radius: 8px;
+	transition: color 0.15s ease;
+}
+
+.contact__close:hover {
+	color: var(--crimson);
+}
+
+.contact__note {
+	margin: -0.6rem 0 0;
+	font-size: 0.92rem;
+	line-height: 1.5;
+	color: var(--text-muted);
+}
+
+/* Name and email share a row on anything wider than a phone; the rest of the
+   fields run full width. */
+.contact__row {
+	display: grid;
+	gap: 1.15rem;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contact__field {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.contact label {
+	font-family: var(--font-display);
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.contact input,
+.contact textarea {
+	width: 100%;
+	font: inherit;
+	color: var(--text);
+	background: var(--paper-warm);
+	border: 1px solid var(--paper-line);
+	border-radius: 12px;
+	padding: 0.8rem 0.95rem;
+	transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.contact input:hover,
+.contact textarea:hover {
+	border-color: #d6cbc8;
+}
+
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+	outline: 2px solid var(--crimson);
+	outline-offset: 1px;
+	background: var(--paper);
+}
+
+.contact textarea {
+	min-height: 8.5rem;
+	line-height: 1.55;
+	resize: vertical;
+}
+
+.contact__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: flex-end;
+	margin-top: 0.35rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--paper-line);
+}
+
+.contact__actions .btn {
+	font-size: 0.95rem;
+	padding: 0.7rem 1.4rem;
+}
+
+@media (max-width: 32rem) {
+	.contact__row {
+		grid-template-columns: 1fr;
+	}
+
+	.contact__form {
+		padding: 1.5rem 1.35rem 1.6rem;
+	}
+
+	.contact__actions .btn {
+		flex: 1;
+		justify-content: center;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,

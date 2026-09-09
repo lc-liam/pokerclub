@@ -31,13 +31,25 @@ search for `<header class="nav">` and `<footer class="footer">`.
 
 ## Common edits
 
+**Update the schedule.** The `<div class="events">` row near the top of `index.html`
+holds one `<article class="event">` per session, in date order. Delete sessions once
+they've passed — nothing does that automatically, so a stale row is the most likely
+way this site starts looking abandoned. For a weekend with no game, add
+`class="event--off"`; those cards are worth keeping, since a missing date reads as an
+oversight rather than "no game that week".
+
 **Add an exec.** Put a square headshot in `assets/img/execs/` (600×600 or larger,
-`firstname.jpg`). In `execs.html`, copy an `<article class="exec">` block and update the
-image, name, role and bio. Delete the `<a class="exec__link">` if they have no LinkedIn.
+`firstname-lastname.jpg`). In `execs.html`, copy an `<article class="exec">` block and
+update the image and name. `exec__role` and `exec__bio` are both optional.
 
 **Add a sponsor.** Drop the logo in `assets/img/sponsors/`. In `sponsors.html`, copy an
 `<article class="sponsor">` block into the right tier. No logo yet? Use the
-`<span class="sponsor__wordmark">` form — see the GTS card.
+`<span class="sponsor__wordmark">` form. Pick a dark-on-light logo variant — the cards
+and the home-page tiles are both white.
+
+**Change the contact address.** It appears in the `data-to` attribute on the
+`<dialog class="contact">` in `about.html` and `sponsors.html`, and in the plain
+`mailto:` links in each page's footer.
 
 **Change the colors.** Everything comes from the variables in `:root` at the top of
 `assets/css/site.css`. Change `--crimson` and the whole site follows.
