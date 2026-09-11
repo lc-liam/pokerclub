@@ -1108,28 +1108,6 @@ p {
 	color: var(--text-muted);
 }
 
-/* Weekends with no game. Kept in the row on purpose — a gap in the dates
-   reads as an oversight, whereas this tells people not to turn up. */
-.event--off {
-	background: transparent;
-	border: 1px dashed var(--paper-line);
-	box-shadow: none;
-}
-
-.event--off:hover {
-	transform: none;
-	box-shadow: none;
-}
-
-.event--off .event__date,
-.event--off .event__time {
-	color: var(--text-muted);
-}
-
-.event--off .event__date span {
-	color: var(--text-muted);
-}
-
 .events__hint {
 	margin: 0;
 	text-align: center;

@@ -34,9 +34,7 @@ search for `<header class="nav">` and `<footer class="footer">`.
 **Update the schedule.** The `<div class="events">` row near the top of `index.html`
 holds one `<article class="event">` per session, in date order. Delete sessions once
 they've passed — nothing does that automatically, so a stale row is the most likely
-way this site starts looking abandoned. For a weekend with no game, add
-`class="event--off"`; those cards are worth keeping, since a missing date reads as an
-oversight rather than "no game that week".
+way this site starts looking abandoned. Weekends with no game are simply left out.
 
 **Add an exec.** Put a square headshot in `assets/img/execs/` (600×600 or larger,
 `firstname-lastname.jpg`). In `execs.html`, copy an `<article class="exec">` block and
