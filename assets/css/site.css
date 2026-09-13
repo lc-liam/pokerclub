@@ -149,6 +149,10 @@ p {
 	margin-bottom: 2.5rem;
 }
 
+.section-head:last-child {
+	margin-bottom: 0;
+}
+
 .section-head--center {
 	margin-inline: auto;
 	text-align: center;
@@ -1038,7 +1042,7 @@ p {
 }
 
 .event {
-	flex: 0 0 14.5rem;
+	flex: 0 0 15.25rem;
 	scroll-snap-align: start;
 	display: flex;
 	flex-direction: column;
@@ -1095,10 +1099,11 @@ p {
 	background: var(--crimson);
 	color: #fff;
 	font-family: var(--font-display);
-	font-size: 0.68rem;
+	font-size: 0.66rem;
 	font-weight: 600;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05em;
 	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .event__note {
@@ -1118,6 +1123,98 @@ p {
 @media (max-width: 32rem) {
 	.event {
 		flex-basis: 13rem;
+	}
+}
+
+/* ---------------------------------------------------------- tournaments */
+
+/* Full-width entries rather than the card grid used elsewhere: a tournament
+   carries a format, a buy-in and a sign-up link, which is more than a card
+   holds comfortably. */
+.tournament {
+	display: grid;
+	grid-template-columns: 10.5rem 1fr;
+	gap: 2rem;
+	padding: 2rem 2.1rem;
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-left: 4px solid var(--crimson);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+.tournament + .tournament {
+	margin-top: 1.5rem;
+}
+
+.tournament__date {
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.tournament__date span {
+	display: block;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	margin-bottom: 0.2rem;
+}
+
+.tournament__time {
+	margin: 0.3rem 0 0;
+	color: var(--text-muted);
+}
+
+.tournament__body h2 {
+	margin: 0 0 0.4rem;
+	font-size: 1.6rem;
+}
+
+.tournament__meta {
+	font-family: var(--font-display);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	margin: 0 0 0.85rem;
+}
+
+.tournament__body p:last-of-type {
+	margin-bottom: 0;
+}
+
+.tournament .btn-row {
+	margin-top: 1.35rem;
+}
+
+/* Shown when there is nothing scheduled. Better than an empty page — it
+   tells the reader the page works and there is simply nothing on yet. */
+.empty {
+	margin: 0;
+	padding: 3.5rem 1.5rem;
+	text-align: center;
+	font-size: 1.1rem;
+	color: var(--text-muted);
+	background: var(--paper-warm);
+	border: 1px dashed var(--paper-line);
+	border-radius: var(--radius);
+}
+
+@media (max-width: 40rem) {
+	.tournament {
+		grid-template-columns: 1fr;
+		gap: 1.1rem;
+		padding: 1.6rem 1.4rem;
+	}
+
+	.tournament__time {
+		margin-top: 0.1rem;
 	}
 }
 

@@ -36,6 +36,16 @@ holds one `<article class="event">` per session, in date order. Delete sessions 
 they've passed — nothing does that automatically, so a stale row is the most likely
 way this site starts looking abandoned. Weekends with no game are simply left out.
 
+**Post a tournament.** `events.html` holds the big one-off events, as opposed to the
+weekly sessions on the home page. It ships showing "No upcoming events" — delete that
+`<p class="empty">` and uncomment the `<article class="tournament">` template below it,
+one per event. Put the empty paragraph back when the list runs out.
+
+The sign-up button is an ordinary link: point it at a Google Form, a Tartan Connect
+event, or wherever you're taking registrations. The site is static and cannot collect
+sign-ups itself. Delete the whole `btn-row` while sign-ups aren't open yet — a button
+that goes nowhere is worse than no button.
+
 **Add an exec.** Put a square headshot in `assets/img/execs/` (600×600 or larger,
 `firstname-lastname.jpg`). In `execs.html`, copy an `<article class="exec">` block and
 update the image and name. `exec__role` and `exec__bio` are both optional.
