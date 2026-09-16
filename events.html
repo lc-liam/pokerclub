@@ -51,40 +51,59 @@
 				<div class="wrap">
 					<!-- ==================================================
 					     POSTING AN EVENT
-					     Delete the <p class="empty"> below and copy the
-					     commented-out <article class="tournament"> block for
-					     each event. Put the empty paragraph back when the
-					     list runs out, rather than leaving the page blank.
+					     Copy an <article class="tournament"> block for each
+					     event, newest first, and delete events once they
+					     have happened. If none are left, restore the
+					     <p class="empty"> kept in a comment at the bottom.
 
 					     The sign-up button is an ordinary link — point it at
 					     a Google Form, a Tartan Connect event page, or
 					     wherever you are taking registrations. This site is
-					     static, so it cannot collect sign-ups itself.
+					     static, so it cannot collect sign-ups itself. Drop
+					     the whole btn-row while sign-ups are not open yet;
+					     a dead button is worse than none.
 
-					     Drop the whole btn-row while sign-ups are not open
-					     yet; a dead button is worse than none.
+					     Both <img class="tournament__sponsor"> and the
+					     <span class="tournament__badge"> are optional — leave
+					     them out for an ordinary club tournament.
 					     ================================================== -->
 
-					<p class="empty">No upcoming events. Check back later.</p>
-
-					<!--
 					<article class="tournament">
 						<div class="tournament__when">
-							<p class="tournament__date"><span>Fri</span> Oct 3</p>
-							<p class="tournament__time">6–11pm</p>
+							<p class="tournament__date"><span>Sun</span> Sep 27</p>
+							<p class="tournament__time">1–8pm</p>
+							<img
+								class="tournament__sponsor"
+								src="assets/img/sponsors/gts.png"
+								alt="Sponsored by GTS"
+							/>
 						</div>
 						<div class="tournament__body">
-							<h2>Fall Open</h2>
-							<p class="tournament__meta">Simmons B · $10 buy-in · 60 seats</p>
+							<h2>
+								GTS Sponsored Tournament
+								<span class="tournament__badge">Invite only</span>
+							</h2>
+							<p class="tournament__meta">McKenna-Peter-Wright · Prizes</p>
 							<p>
-								A sentence or two on the format, the prize pool, and who the event is
-								for. Say plainly whether beginners are welcome.
+								A tournament run with GTS, the electronic market maker. Recruiters and traders
+								from the firm play alongside members, so there is plenty of room to talk to
+								them between hands — about the work, about how they hire, or about the hand
+								you just misplayed. Prizes include speakers, games consoles and other tech.
 							</p>
 							<div class="btn-row">
-								<a class="btn btn--primary" href="https://example.com/signup">Sign up</a>
+								<a
+									class="btn btn--primary"
+									href="https://forms.gle/Wej165ovVFDmTFJS9"
+									target="_blank"
+									rel="noreferrer"
+									>Sign up</a
+								>
 							</div>
 						</div>
 					</article>
+
+					<!-- When the list runs out, put this back so the page isn't blank:
+					<p class="empty">No upcoming events. Check back later.</p>
 					-->
 				</div>
 			</section>

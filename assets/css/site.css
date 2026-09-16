@@ -1170,9 +1170,33 @@ p {
 	color: var(--text-muted);
 }
 
+/* Sponsor lockup under the date, for events a firm is backing. The sponsor
+   logos are dark-on-light, which suits this white panel. */
+.tournament__sponsor {
+	margin-top: 1.5rem;
+	max-width: 8rem;
+	height: auto;
+}
+
 .tournament__body h2 {
 	margin: 0 0 0.4rem;
 	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	flex-wrap: wrap;
+}
+
+.tournament__badge {
+	padding: 0.28rem 0.7rem;
+	border-radius: 999px;
+	border: 1px solid var(--crimson);
+	color: var(--crimson);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .tournament__meta {
