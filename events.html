@@ -52,9 +52,14 @@
 					<!-- ==================================================
 					     POSTING AN EVENT
 					     Copy an <article class="tournament"> block for each
-					     event, newest first, and delete events once they
-					     have happened. If none are left, restore the
-					     <p class="empty"> kept in a comment at the bottom.
+					     event, soonest first, and set its data-date to the day
+					     of the event as YYYY-MM-DD. assets/js/schedule.js hides
+					     an event the day after that date, and shows the "no
+					     upcoming events" line once they have all gone, so
+					     nothing here needs deleting by hand.
+
+					     Get the date wrong and the event simply stays up — a
+					     bad date never hides an event that is really happening.
 
 					     The sign-up button is an ordinary link — point it at
 					     a Google Form, a Tartan Connect event page, or
@@ -68,7 +73,7 @@
 					     them out for an ordinary club tournament.
 					     ================================================== -->
 
-					<article class="tournament">
+					<article class="tournament" data-date="2026-09-27">
 						<div class="tournament__when">
 							<p class="tournament__date"><span>Sun</span> Sep 27</p>
 							<p class="tournament__time">1–8pm</p>
@@ -102,9 +107,8 @@
 						</div>
 					</article>
 
-					<!-- When the list runs out, put this back so the page isn't blank:
-					<p class="empty">No upcoming events. Check back later.</p>
-					-->
+					<!-- Shown automatically once every event above has passed. -->
+					<p class="empty" data-schedule-empty hidden>No upcoming events. Check back later.</p>
 				</div>
 			</section>
 
@@ -218,5 +222,6 @@
 
 		<script src="assets/js/nav.js"></script>
 		<script src="assets/js/contact.js"></script>
+		<script src="assets/js/schedule.js"></script>
 	</body>
 </html>

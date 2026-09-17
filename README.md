@@ -32,9 +32,21 @@ search for `<header class="nav">` and `<footer class="footer">`.
 ## Common edits
 
 **Update the schedule.** The `<div class="events">` row near the top of `index.html`
-holds one `<article class="event">` per session, in date order. Delete sessions once
-they've passed — nothing does that automatically, so a stale row is the most likely
-way this site starts looking abandoned. Weekends with no game are simply left out.
+holds one `<article class="event">` per session, in date order. Weekends with no game
+are simply left out.
+
+Each card carries `data-date="YYYY-MM-DD"`, and `assets/js/schedule.js` hides it the
+day after — a session stays up for the whole of its own day, then drops off on its
+own. The same applies to `<article class="tournament">` on `events.html`. When
+everything has expired the row is replaced by a "nothing on the schedule" line, so
+the page never just goes blank.
+
+Two things to know about it. The date is stored twice — in the attribute and in the
+text people read — so keep them matching; the attribute is what decides when the card
+disappears. And a date the script can't read (`09/01/2026`, `Sept 1`, a typo'd year)
+leaves the card **visible**, on purpose: a stale card gets noticed and fixed, whereas
+a silently hidden session does not. Add sessions for the whole semester up front and
+the row looks after itself.
 
 **Post a tournament.** `events.html` holds the big one-off events, as opposed to the
 weekly sessions on the home page. It ships showing "No upcoming events" — delete that

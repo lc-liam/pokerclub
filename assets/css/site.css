@@ -68,6 +68,12 @@ img {
 	display: block;
 }
 
+/* .event and .tournament set their own display, which would otherwise beat
+   the default [hidden] rule and leave expired entries on the page. */
+[hidden] {
+	display: none !important;
+}
+
 a {
 	color: var(--crimson);
 	text-decoration-thickness: 1px;
