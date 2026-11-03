@@ -1184,6 +1184,56 @@ p {
 	height: auto;
 }
 
+/* Several backers on one event. Stacked rather than in a row: the logos have
+   very different aspect ratios, and side by side the wide wordmarks shrink to
+   nothing in this narrow column. */
+.tournament__sponsors {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.9rem;
+	margin-top: 1.5rem;
+}
+
+.tournament__sponsors img {
+	max-width: 7.5rem;
+	height: auto;
+}
+
+/* Run of show for a full-day event. */
+.runsheet {
+	list-style: none;
+	margin: 1.4rem 0 0;
+	padding: 0;
+	border-top: 1px solid var(--paper-line);
+}
+
+.runsheet li {
+	display: grid;
+	grid-template-columns: 9.5rem 1fr;
+	gap: 1rem;
+	padding: 0.6rem 0;
+	border-bottom: 1px solid var(--paper-line);
+	font-size: 0.95rem;
+}
+
+.runsheet span {
+	font-family: var(--font-display);
+	font-size: 0.82rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--crimson);
+	align-self: center;
+}
+
+@media (max-width: 40rem) {
+	.runsheet li {
+		grid-template-columns: 1fr;
+		gap: 0.1rem;
+	}
+}
+
 .tournament__body h2 {
 	margin: 0 0 0.4rem;
 	font-size: 1.6rem;
