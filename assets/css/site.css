@@ -1190,14 +1190,6 @@ p {
 	color: var(--crimson);
 }
 
-.merch__note {
-	max-width: 34rem;
-	margin: 1.5rem auto 0;
-	text-align: center;
-	font-size: 0.95rem;
-	color: var(--text-muted);
-}
-
 /* ---------------------------------------------------------- tournaments */
 
 /* Full-width entries rather than the card grid used elsewhere: a tournament
