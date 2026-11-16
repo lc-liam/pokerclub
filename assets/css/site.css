@@ -1132,6 +1132,72 @@ p {
 	}
 }
 
+/* ---------------------------------------------------------------- merch */
+
+.merch-grid {
+	display: grid;
+	gap: 1.75rem;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.merch {
+	display: flex;
+	flex-direction: column;
+	background: var(--paper);
+	border: 1px solid var(--paper-line);
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.merch:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--shadow-lift);
+}
+
+/* The mockups share one aspect ratio, so matching it here shows each garment
+   whole rather than cropping the sleeves off. */
+.merch__photo {
+	width: 100%;
+	aspect-ratio: 1199 / 874;
+	object-fit: cover;
+	background: var(--paper-warm);
+	border-bottom: 1px solid var(--paper-line);
+}
+
+.merch__body {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.1rem 1.3rem 1.3rem;
+}
+
+.merch__name {
+	margin: 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.merch__price {
+	margin: 0;
+	flex: none;
+	font-family: var(--font-display);
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--crimson);
+}
+
+.merch__note {
+	max-width: 34rem;
+	margin: 1.5rem auto 0;
+	text-align: center;
+	font-size: 0.95rem;
+	color: var(--text-muted);
+}
+
 /* ---------------------------------------------------------- tournaments */
 
 /* Full-width entries rather than the card grid used elsewhere: a tournament

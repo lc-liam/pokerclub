@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Merch · CMU Poker Club</title>
+		<meta
+			name="description"
+			content="CMU Poker Club merchandise — hoodies, crewnecks and tees, ordered through our order form."
+		/>
+		<link rel="icon" href="assets/img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/css/site.css" />
+	</head>
+	<body>
+		<header class="nav">
+			<div class="wrap nav__inner">
+				<a class="nav__brand" href="index.html">
+					<img src="assets/img/logo.svg" alt="" />
+					<span>CMU Poker Club</span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+					<span></span>
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul class="nav__links" id="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="merch.html" aria-current="page">Merch</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="execs.html">Exec Board</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a class="nav__cta" href="index.html#join">Join</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<main>
+			<section class="banner">
+				<div class="wrap">
+					<h1>Merch</h1>
+					<p>Club hoodies, crewnecks and tees. Orders go through the form below.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="wrap">
+					<!-- ==================================================
+					     UPDATING THE MERCH
+					     One <article class="merch"> per item. The photos come
+					     from the order form — keep the two in step, so nobody
+					     orders something they saw here and can't find there.
+
+					     When a run closes, swap the order button for a line
+					     saying orders are shut and when the next run opens.
+					     ================================================== -->
+					<div class="merch-grid">
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/black-hoodie.jpg"
+								alt="Black hoodie with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Black Hoodie</h2>
+								<p class="merch__price">$70</p>
+							</div>
+						</article>
+
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/button-hoodie.jpg"
+								alt="Button hoodie with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Button Hoodie</h2>
+								<p class="merch__price">$70</p>
+							</div>
+						</article>
+
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/quarter-zip.jpg"
+								alt="Black quarter-zip hoodie with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Black Quarter-Zip Hoodie</h2>
+								<p class="merch__price">$70</p>
+							</div>
+						</article>
+
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/black-crewneck.jpg"
+								alt="Black crewneck with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Black Crewneck</h2>
+								<p class="merch__price">$50</p>
+							</div>
+						</article>
+
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/cream-crewneck.jpg"
+								alt="Cream crewneck with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Cream Crewneck</h2>
+								<p class="merch__price">$50</p>
+							</div>
+						</article>
+
+						<article class="merch">
+							<img
+								class="merch__photo"
+								src="assets/img/merch/black-tshirt.jpg"
+								alt="Black t-shirt with the CMU Poker Club logo"
+							/>
+							<div class="merch__body">
+								<h2 class="merch__name">Black T-Shirt</h2>
+								<p class="merch__price">$30</p>
+							</div>
+						</article>
+					</div>
+
+					<div class="btn-row" style="justify-content: center">
+						<a
+							class="btn btn--primary"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSfM_DVA3bCJexbwtheRMRQNXZg7VobY2_6NxmS8X_YJCRGGuQ/viewform"
+							target="_blank"
+							rel="noreferrer"
+							>Order merch</a
+						>
+					</div>
+
+					<p class="merch__note">
+						The order form takes your sizes and quantities, and asks you to confirm payment at the
+						end. Ask in the Discord if you're unsure about sizing.
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrap">
+				<div class="footer__grid">
+					<div>
+						<div class="footer__brand">
+							<img src="assets/img/logo.svg" alt="" />
+							<strong>CMU Poker Club</strong>
+						</div>
+						<p>
+							The poker club at Carnegie Mellon University. We're here to play, to learn, and to have
+							fun — whatever your experience with the game.
+						</p>
+					</div>
+					<div>
+						<h4>Pages</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="events.html">Events</a></li>
+							<li><a href="merch.html">Merch</a></li>
+							<li><a href="about.html">About the club</a></li>
+							<li><a href="execs.html">Exec board</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Stay connected</h4>
+						<ul>
+							<li><a href="mailto:pokerclub@andrew.cmu.edu">Email us</a></li>
+							<li><a href="https://discord.gg/kPfzrEk4em">Discord</a></li>
+							<li><a href="https://www.instagram.com/cmupokerclub/">Instagram</a></li>
+							<li>
+								<a href="https://tartanconnect.cmu.edu/poker/club_signup">Tartan Connect</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bar">
+				<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; width: min(100% - 2.5rem, var(--wrap))">
+					<p>© 2026 CMU Poker Club</p>
+					<p>Carnegie Mellon University</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/nav.js"></script>
+	</body>
+</html>

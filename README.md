@@ -48,6 +48,13 @@ leaves the card **visible**, on purpose: a stale card gets noticed and fixed, wh
 a silently hidden session does not. Add sessions for the whole semester up front and
 the row looks after itself.
 
+**Update the merch.** `merch.html` has one `<article class="merch">` per item, with
+the photo, the name and the price. The photos were taken from the Google order form,
+and the two need to stay in step — someone who sees an item here will go looking for
+it in the form. The order button is just a link to that form; change it there and
+here. When a run closes, replace the button with a line saying when the next one
+opens.
+
 **Post a tournament.** `events.html` holds the big one-off events, as opposed to the
 weekly sessions on the home page. It ships showing "No upcoming events" — delete that
 `<p class="empty">` and uncomment the `<article class="tournament">` template below it,
